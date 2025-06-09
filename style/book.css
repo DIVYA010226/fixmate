@@ -1,0 +1,257 @@
+/* Reset some basics */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  color: #222;
+  padding: 30px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* HEADER */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(10, 10, 8, 0.95);
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  height: 60px;
+}
+
+/* NAVIGATION LINKS */
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+/* PAGE TITLE */
+.page-title {
+  text-align: center;
+  color: #ffcc00;
+  font-size: 2.8rem;
+  margin: 40px 0 30px;
+  font-weight: 700;
+  text-shadow: 1px 1px 3px #00000088;
+}
+
+/* BOOKINGS CONTAINER */
+#bookings-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* INDIVIDUAL BOOKING CARD */
+.booking-card {
+  background-color: #000;
+  color: #ffcc00;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(255, 204, 0, 0.35);
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.booking-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(255, 204, 0, 0.6);
+}
+
+.booking-card h3 {
+  font-size: 1.7rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+  border-bottom: 2px solid #ffcc00;
+  padding-bottom: 6px;
+}
+
+.booking-details p {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
+}
+
+.booking-details p strong {
+  color: #fff;
+  display: inline-block;
+  width: 130px;
+}
+
+/* SUBMIT FEEDBACK BUTTON */
+.submitFeedbackBtn {
+  margin-top: 15px;
+  padding: 10px 22px;
+  font-weight: 600;
+  background-color: #ffcc00;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  color: #000;
+  box-shadow: 0 5px 10px rgba(255, 204, 0, 0.7);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+}
+
+.submitFeedbackBtn:hover {
+  background-color: #e6b800;
+  box-shadow: 0 7px 15px rgba(230, 184, 0, 0.9);
+}
+
+/* CLEAR BUTTON */
+.clear-btn {
+  display: block;
+  margin: 50px auto 0;
+  background-color: #ffcc00;
+  color: #000;
+  border: none;
+  padding: 14px 32px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(255, 204, 0, 0.7);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.clear-btn:hover {
+  background-color: #e6b800;
+  box-shadow: 0 8px 18px rgba(230, 184, 0, 0.9);
+}
+
+/* FEEDBACK POPUP OVERLAY */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1500;
+}
+
+/* POPUP CONTENT BOX */
+.popup-content {
+  background-color: #111;
+  color: #ffcc00;
+  padding: 30px 25px;
+  border-radius: 15px;
+  max-width: 420px;
+  width: 90%;
+  box-shadow: 0 8px 20px rgba(255, 204, 0, 0.7);
+  position: relative;
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #ffcc00;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #fff;
+}
+
+/* FEEDBACK FORM */
+#feedbackForm textarea {
+  width: 100%;
+  min-height: 110px;
+  background-color: #222;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 18px;
+  font-size: 1.1rem;
+  color: #ffcc00;
+  resize: vertical;
+  box-shadow: inset 0 0 8px #ffcc0055;
+  margin-bottom: 20px;
+}
+
+#feedbackForm button[type="submit"] {
+  background-color: #ffcc00;
+  color: #000;
+  border: none;
+  padding: 12px 28px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(255, 204, 0, 0.7);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#feedbackForm button[type="submit"]:hover {
+  background-color: #e6b800;
+  box-shadow: 0 8px 18px rgba(230, 184, 0, 0.9);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px 10px;
+  background-color: rgba(10, 10, 8, 0.95);
+  margin-top: 60px;
+  color: #ffcc00;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+footer p {
+  margin: 5px 0;
+  font-style: italic;
+}
+
+/* Responsive Fixes */
+@media (max-width: 600px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+  }
+
+  .nav-links a {
+    padding: 8px 12px;
+  }
+}

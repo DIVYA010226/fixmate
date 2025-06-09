@@ -1,0 +1,232 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and Background */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #f9f8f5;
+  background-color: #262309;
+}
+
+.page-wrapper {
+  background: url('../images/home1.png') no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(49, 49, 47, 0.85);
+  padding: 15px 20px;
+  position: relative;
+  z-index: 1000;
+}
+
+.logo {
+  height: 60px;
+}
+
+/* NAVIGATION LINKS */
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #f3be00;
+}
+
+/* WORKER FORM SECTION */
+.worker-form-section {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  margin: 30px auto 40px auto;
+}
+
+.worker-form-section h3 {
+  margin-bottom: 20px;
+  color: #f3be00;
+  text-align: center;
+}
+
+.add-worker-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.add-worker-form button {
+  background-color: #FFD700;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  color: #04050c;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.add-worker-form button:hover {
+  background-color: #edcf26;
+}
+
+/* WORKER LIST SECTION */
+.worker-list-section {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto 50px auto;
+}
+
+.worker-list-section h3 {
+  margin-bottom: 20px;
+  color: #f3be00;
+  text-align: center;
+}
+
+#workersTable {
+  width: 100%;
+  border-collapse: collapse;
+  color: #fff;
+  font-size: 1rem;
+}
+
+#workersTable th,
+#workersTable td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+#workersTable th {
+  background-color: rgba(49, 49, 47, 0.85);
+  color: #f3be00;
+}
+
+#workersTable td button {
+  border: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-right: 8px;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+#workersTable td button.details-btn {
+  background-color: #2196f3;
+}
+
+#workersTable td button.details-btn:hover {
+  background-color: #1976d2;
+}
+
+#workersTable td button.edit-btn {
+  background-color: #4caf50;
+}
+
+#workersTable td button.edit-btn:hover {
+  background-color: #45a049;
+}
+
+#workersTable td button.delete-btn {
+  background-color: #e53935;
+}
+
+#workersTable td button.delete-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Popup Styling */
+.popup {
+  display: none; /* hidden by default */
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  overflow: auto;
+}
+
+.popup-content {
+  background-color: #1a1a1a;
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 12px;
+  width: 400px;
+  color: #f9f8f5;
+  box-shadow: 0 0 15px #f3be00;
+  position: relative;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+#closePopup {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  color: #f3be00;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+}
+
+#closePopup:hover {
+  color: #fff;
+}
+
+/* FOOTER */
+footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ccc;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer a {
+  color: #f3be00;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}

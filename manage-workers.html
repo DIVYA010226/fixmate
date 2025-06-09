@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Manage Workers - FixMate</title>
+  <link rel="stylesheet" href="style/manage-workers.css" />
+</head>
+<body class="page-wrapper">
+  <header class="header-container">
+    <img src="images/logo1.png" alt="FixMate Logo" class="logo" />
+    <nav class="nav-links">
+       <a href="admin.html">Dashboard</a>
+      <a href="view-bookings.html">View Bookings</a>
+      <a href="manage-services.html">Manage Services</a>
+      <a href="manage-workers.html">Manage Workers</a>
+      <a href="assign-jobs.html">Assign Jobs</a>
+      <a href="feed.html">Feedback</a>
+      <a href="login.html">Logout</a>
+    </nav>
+  </header>
+
+  <section class="worker-form-section">
+    <form id="addWorkerForm" class="add-worker-form">
+      <h3>Add New Worker</h3>
+      <input type="text" id="workerName" placeholder="Worker Name" required />
+      <input type="text" id="workerContact" placeholder="Contact Number" required />
+      <input type="text" id="workerSkills" placeholder="Skills (comma separated)" required />
+      <button type="submit">Add Worker</button>
+    </form>
+  </section>
+
+  <section class="worker-list-section">
+    <div class="worker-list">
+      <h3>Current Workers</h3>
+      <table id="workersTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Contact</th>
+            <th>Skills</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="workerTableBody">
+          <!-- JS will insert rows here -->
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Popup Modal -->
+  <div id="workerPopup" class="popup">
+    <div class="popup-content">
+      <span id="closePopup">&times;</span>
+      <h3>Worker Details</h3>
+      <p id="popupName"></p>
+      <p id="popupContact"></p>
+      <p id="popupSkills"></p>
+      <p id="popupSalary"></p>
+      <p id="popupProfile"></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 FixMate. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts/manage-workers.js"></script>
+</body>
+</html>
+
+

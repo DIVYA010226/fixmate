@@ -1,0 +1,260 @@
+/* Reset some basics */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #262309;
+  color: #f9f8f5;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Wrapper with translucent background image */
+.page-wrapper {
+  position: relative;
+  min-height: 100vh;
+  z-index: 0;
+  overflow-x: hidden;
+}
+
+.page-wrapper::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('../images/index.png') no-repeat center center / cover;
+  opacity: 0.90;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Header with slight transparency */
+header {
+  background-color: rgba(49, 49, 47, 0.85);
+  padding: 15px 20px;
+  transition: box-shadow 0.3s ease;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header.scrolled {
+  box-shadow: 0 4px 15px rgba(74, 73, 73, 0.3);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Logo */
+.logo {
+  height: 70px;
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+
+/* Navigation container */
+.nav-links {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1em;
+  color: #f3f2ec;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.nav-links a {
+  color: #ededeb;
+  text-decoration: none;
+  padding: 0 6px;
+  position: relative;
+}
+
+.nav-links a:not(:last-child)::after {
+  content: "|";
+  position: absolute;
+  right: 0;
+  color: #262309;
+  padding-left: 6px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Right side: buttons + search bar */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-shrink: 0;
+}
+
+/* Guide Button */
+.btn-guide {
+  background-color: #f3be00;
+  border: none;
+  padding: 10px 18px;
+  color: #262309;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-guide:hover {
+  background-color: #edcf26;
+}
+
+/* Login Button */
+.btn-login {
+  background-color: #f3be00;
+  color: #262309;
+  font-weight: 600;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+  background-color: #edcf26;
+}
+
+/* Search Bar */
+.search-bar {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  width: 180px;
+  max-width: 100%;
+  background-color: #fff;
+  color: #262309;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 60px 15px 40px;
+  color: #262309;
+}
+
+.hero h1 {
+  font-size: 2.8em;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #444;
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  background-color: transparent;
+  padding: 20px 0;
+  max-width: 700px;
+  margin: 40px auto;
+}
+
+.feature-box {
+  background-color: rgba(58, 58, 26, 0.75);
+  color: #f9f8f5;
+  width: 180px;
+  padding: 15px 12px;
+  text-align: center;
+  border-radius: 6px;
+  font-size: 0.8em;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.05);
+}
+
+.feature-box img {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 10px;
+}
+
+.feature-box h3 {
+  font-size: 1em;
+  margin-bottom: 6px;
+}
+
+.feature-box p {
+  font-size: 0.75em;
+  color: #eee;
+}
+
+.feature-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 30px rgba(65, 65, 64, 0.2);
+}
+
+/* Responsive layout for small screens */
+@media (max-width: 600px) {
+  .features {
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .feature-box {
+    width: 90%;
+    margin: 10px 0;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .header-right {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .btn-guide,
+  .btn-login {
+    width: 100%;
+    text-align: center;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #000000;
+  padding: 20px 20px;
+  color: #f3be00;
+  text-align: center;
+  font-size: 0.9em;
+  border-radius: 0 0 10px 10px;
+}
+
+.footer-container {
+  max-width: 600px;
+  margin: 0 auto;
+}

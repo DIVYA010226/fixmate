@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Assign Jobs - FixMate</title>
+  <link rel="stylesheet" href="style/assign-jobs.css" />
+</head>
+<body class="page-wrapper">
+
+  <header class="header-container">
+    <img src="images/logo1.png" alt="FixMate Logo" class="logo" />
+    <nav class="nav-links">
+      <a href="admin.html">Dashboard</a>
+      <a href="manage-workers.html">Manage Workers</a>
+      <a href="assign-jobs.html" class="active">Assign Jobs</a>
+      <a href="manage-services.html">Services</a>
+      <a href="feed.html">Feedback</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="assign-job-section">
+      <h2>Assign Worker to Job</h2>
+      <form id="assignForm" class="assign-job-form">
+        <label for="jobSelect">Select Job:</label>
+        <select id="jobSelect" required>
+          <!-- jobs options inserted by JS -->
+        </select>
+
+        <label for="workerSelect">Select Worker:</label>
+        <select id="workerSelect" required>
+          <!-- workers options inserted by JS -->
+        </select>
+
+        <button type="submit">Assign Job</button>
+      </form>
+    </section>
+
+    <section class="assigned-jobs-section">
+      <h2>Assigned Jobs</h2>
+      <table id="assignedJobsTable">
+        <thead>
+          <tr>
+            <th>Job</th>
+            <th>Worker</th>
+            <th>Contact</th>
+            <th>Skills</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="assignmentsBody">
+          <!-- assigned jobs rows inserted by JS -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Job Details Popup -->
+  <div id="jobDetailsPopup" class="popup" style="display:none;">
+    <div class="popup-content">
+      <span id="closePopup" class="close-btn">&times;</span>
+      <h3>Job Assignment Details</h3>
+      <p id="popupJob"></p>
+      <p id="popupWorker"></p>
+      <p id="popupContact"></p>
+      <p id="popupSkills"></p>
+      <p id="popupSalary"></p>
+      <p id="popupProfile"></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 FixMate. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts/assign-jobs.js"></script>
+</body>
+</html>
+
+

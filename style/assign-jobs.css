@@ -1,0 +1,234 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and Background */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #f9f8f5;
+  background-color: #262309;
+}
+
+.page-wrapper {
+  background: url('../images/home1.png') no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(49, 49, 47, 0.85);
+  padding: 15px 20px;
+  position: relative;
+  z-index: 1000;
+}
+
+.logo {
+  height: 60px;
+}
+
+/* NAVIGATION LINKS */
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #f3be00;
+}
+
+/* MAIN CONTENT */
+main {
+  flex-grow: 1;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Form Styles */
+.assign-job-form {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: #f3be00;
+}
+
+.assign-job-form label {
+  font-weight: 600;
+}
+
+.assign-job-form select,
+.assign-job-form button {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+}
+
+.assign-job-form button {
+  background-color: #FFD700;
+  color: #04050c;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.assign-job-form button:hover {
+  background-color: #edcf26;
+}
+
+/* Assigned Jobs Table */
+.assigned-jobs-section {
+  width: 90%;
+  max-width: 900px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 25px;
+  border-radius: 10px;
+  color: #f3be00;
+}
+
+#assignedJobsTable {
+  width: 100%;
+  border-collapse: collapse;
+  color: #fff;
+  font-size: 1rem;
+}
+
+#assignedJobsTable th,
+#assignedJobsTable td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+#assignedJobsTable th {
+  background-color: rgba(49, 49, 47, 0.85);
+  color: #f3be00;
+}
+
+#assignedJobsTable td button {
+  border: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-right: 8px;
+  color: #fff;
+  background-color: #2196f3;
+  transition: background-color 0.3s ease;
+}
+
+#assignedJobsTable td button:hover {
+  background-color: #1976d2;
+}
+
+/* Popup Styling */
+.popup {
+  display: none; /* hidden by default */
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  overflow: auto;
+}
+
+.popup-content {
+  background-color: #1a1a1a;
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 12px;
+  width: 400px;
+  color: #f9f8f5;
+  box-shadow: 0 0 15px #f3be00;
+  position: relative;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+#closePopup {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  color: #f3be00;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+}
+
+#closePopup:hover {
+  color: #fff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  main {
+    padding: 20px 10px;
+  }
+
+  .assign-job-form, .assigned-jobs-section {
+    width: 100%;
+    padding: 20px;
+  }
+
+  #assignedJobsTable th,
+  #assignedJobsTable td {
+    font-size: 0.9rem;
+  }
+}
+
+/* FOOTER */
+footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ccc;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer a {
+  color: #f3be00;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FixMate - Bookings</title>
+  <link rel="stylesheet" href="style/book.css" />
+</head>
+<body>
+
+  <header class="header-container">
+    <img src="images/123.png" alt="FixMate Logo" class="logo" />
+    <nav class="nav-links">
+      <a href="index.html">FixMate</a>
+      <a href="home.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="book.html">Booking</a>
+    </nav>
+  </header>
+
+  <h1 class="page-title">FixMate - Booked Services</h1>
+
+  <div id="bookings-container">
+    <!-- Bookings will be loaded here dynamically by JS -->
+  </div>
+
+  <button onclick="clearBookings()" class="clear-btn">Clear All Bookings</button>
+
+  <!-- Feedback Popup -->
+  <div id="feedbackPopup" class="popup" style="display:none;">
+    <div class="popup-content">
+      <span id="closeFeedbackPopup" class="close-btn">&times;</span>
+      <h3>Submit Feedback</h3>
+      <form id="feedbackForm">
+        <input type="hidden" id="bookingIndex" />
+        <textarea id="feedbackMessage" placeholder="Write your feedback here..." required></textarea>
+        <button type="submit">Submit Feedback</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 FixMate. All rights reserved.</p>
+    <p>Made with ❤️ by the FixMate Team</p>
+  </footer>
+
+  <script src="scripts/book.js"></script>
+</body>
+</html>

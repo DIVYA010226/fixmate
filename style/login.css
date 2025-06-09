@@ -1,0 +1,87 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #f9f8f5;
+  background-color: #262309;
+}
+
+.page-wrapper {
+  background: url('../images/home1.png') no-repeat center center/cover;
+  min-height: 100vh;
+}
+
+/* Login Section */
+.login-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  min-height: 100vh;
+}
+
+.login-form {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  animation: fadeInSlide 1.2s ease;
+}
+
+.login-form h2 {
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.login-form input,
+.login-form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.login-form select {
+  background-color: #fff;
+  color: #000;
+}
+
+.login-form button {
+  background-color: #FFD700;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  color: #04050c;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.login-form button:hover {
+  background-color: #edcf26;
+}
+
+#loginMessage {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: lightcoral;
+}
+
+/* Animation */
+@keyframes fadeInSlide {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+

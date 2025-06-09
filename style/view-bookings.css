@@ -1,0 +1,147 @@
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #262309;
+  margin: 0;
+  color: #f9f8f5;
+}
+
+/* PAGE WRAPPER */
+.page-wrapper {
+  background: url('../images/home1.png') no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(49, 49, 47, 0.85);
+  padding: 15px 20px;
+  position: relative;
+  z-index: 1000;
+}
+
+.logo {
+  height: 60px;
+}
+
+/* NAVIGATION LINKS */
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #f3be00;
+}
+
+/* Main Content */
+.content-container {
+  flex: 1;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7); /* transparent black */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  color: white; /* white text */
+}
+
+.content-container h1 {
+  font-size: 2.5rem;
+  color: #ffeb3b; /* bright yellow */
+  margin-bottom: 25px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Bookings Container */
+#bookings-container {
+  display: flex;
+  flex-wrap: wrap;          /* allow wrapping to next line */
+  gap: 20px;                /* spacing between cards */
+  justify-content: center;  /* center cards horizontally */
+}
+
+/* Individual Booking Card */
+.booking-card {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(255, 235, 59, 0.4);
+  padding: 25px 30px;
+  transition: box-shadow 0.3s ease;
+  border-left: 6px solid #ffeb3b;
+  color: white;
+
+  /* Set fixed width to show multiple cards side by side */
+  flex: 1 1 300px;  /* grow, shrink, basis width */
+  max-width: 320px;
+  min-width: 280px;
+  box-sizing: border-box;
+}
+
+.booking-card:hover {
+  box-shadow: 0 10px 25px rgba(255, 235, 59, 0.7);
+}
+
+
+/* FOOTER */
+footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ccc;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer a {
+  color: #f3be00;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .logo {
+    margin-right: 0;
+    width: 120px;
+  }
+  
+  .nav-links {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .content-container {
+    margin: 20px 10px;
+  }
+}

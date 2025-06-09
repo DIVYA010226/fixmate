@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Manage Services - FixMate Admin</title>
+  <link rel="stylesheet" href="style/manage-services.css" />
+</head>
+<body class="page-wrapper">
+
+  <header class="header-container">
+    <img src="images/logo1.png" alt="FixMate Logo" class="logo" />
+    <nav class="nav-links">
+      <a href="view-bookings.html">View Bookings</a>
+      <a href="manage-services.html" class="active">Manage Services</a>
+      <a href="manage-workers.html">Manage Workers</a>
+      <a href="assign-jobs.html">Assign Jobs</a>
+      <a href="feed.html">Feedback</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="add-service-form">
+      <h3>Add New Service</h3>
+      <form id="addServiceForm">
+        <input type="text" id="serviceName" placeholder="Service Name" required />
+        <input type="text" id="servicePrice" placeholder="Price (e.g., ₹500)" required />
+        <input type="text" id="serviceDuration" placeholder="Duration (e.g., 2 hours)" required />
+        <button type="submit">Add Service</button>
+      </form>
+    </section>
+
+    <section class="service-list">
+      <h3>Current Services</h3>
+      <table id="servicesTable">
+        <thead>
+          <tr>
+            <th>Service Name</th>
+            <th>Price</th>
+            <th>Duration</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="servicesTableBody">
+          <!-- Services will be dynamically inserted here -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 FixMate. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts/manage-services.js"></script>
+</body>
+</html>
+

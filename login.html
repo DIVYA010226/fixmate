@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FixMate Login</title>
+  <link rel="stylesheet" href="style/login.css" />
+</head>
+<body class="page-wrapper">
+  <div class="login-section">
+    <form class="login-form" id="login-form">
+      <h2>Login to FixMate</h2>
+
+      <input type="text" id="username" placeholder="Username" required />
+      <input type="password" id="password" placeholder="Password" required />
+
+      <select id="role" required>
+        <option value="">Select Role</option>
+        <option value="admin">Admin</option>
+        <option value="worker">Worker</option>
+        <option value="user">User</option>
+      </select>
+
+      <button type="submit">Login</button>
+      <p id="loginMessage"></p>
+    </form>
+  </div>
+
+  <script src="scripts/login.js"></script>
+</body>
+</html>
+
