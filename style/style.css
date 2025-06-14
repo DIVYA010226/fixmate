@@ -243,18 +243,25 @@ header.scrolled {
     width: 100%;
   }
 }
-
-/* Footer */
+/* FOOTER */
 footer {
-  background-color: #000000;
-  padding: 20px 20px;
-  color: #f3be00;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ccc;
   text-align: center;
-  font-size: 0.9em;
-  border-radius: 0 0 10px 10px;
+  padding: 20px 10px;
+  font-size: 0.9rem;
+  margin-top: auto;
 }
 
-.footer-container {
-  max-width: 600px;
-  margin: 0 auto;
+footer p {
+  margin: 5px 0;
+}
+
+footer a {
+  color: #f3be00;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }

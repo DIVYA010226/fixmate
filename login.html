@@ -2,27 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>FixMate Login</title>
   <link rel="stylesheet" href="style/login.css" />
 </head>
-<body class="page-wrapper">
-  <div class="login-section">
-    <form class="login-form" id="login-form">
-      <h2>Login to FixMate</h2>
+<body>
+  <div class="page-wrapper">
+   
 
-      <input type="text" id="username" placeholder="Username" required />
-      <input type="password" id="password" placeholder="Password" required />
+    <!-- Login Section -->
+    <main>
+      <section class="login-section">
+        <div class="container login-container">
+          <h2>Login to FixMate</h2>
+          <form id="login-form" class="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required />
 
-      <select id="role" required>
-        <option value="">Select Role</option>
-        <option value="admin">Admin</option>
-        <option value="worker">Worker</option>
-        <option value="user">User</option>
-      </select>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required />
 
-      <button type="submit">Login</button>
-      <p id="loginMessage"></p>
-    </form>
+            <label for="role">Role:</label>
+            <select id="role" required>
+              <option value="admin">Admin</option>
+              <option value="worker">Worker</option>
+              <option value="user">User</option>
+            </select>
+
+            <button type="submit" class="btn-login-form">Login</button>
+            <p id="loginMessage"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container footer-container">
+        <p>© 2025 FixMate | Contact: info@fixmate.com | Phone: +1-234-567-8901 | Address: 123 FixMate Lane, Tech City</p>
+      </div>
+    </footer>
   </div>
 
   <script src="scripts/login.js"></script>

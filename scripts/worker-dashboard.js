@@ -1,35 +1,29 @@
-// Replace with the logged-in worker's email (you can use session/localStorage in real app)
-const loggedInWorkerEmail = localStorage.getItem("workerEmail");
-
-function loadWorkerJobs() {
+document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("worker-jobs-container");
-  container.innerHTML = "";
 
-  const bookings = JSON.parse(localStorage.getItem("bookings")) || [];
+  // Get all assignments from localStorage
+  const assignments = JSON.parse(localStorage.getItem("assignments")) || [];
 
-  const assignedJobs = bookings.filter(
-    (booking) => booking.worker.email === loggedInWorkerEmail
-  );
-
-  if (assignedJobs.length === 0) {
-    container.innerHTML = "<p>No assigned jobs found.</p>";
+  if (assignments.length === 0) {
+    container.innerHTML = "<p style='color: gray;'>No jobs have been assigned yet.</p>";
     return;
   }
 
-  assignedJobs.forEach((job) => {
-    const card = document.createElement("div");
-    card.classList.add("booking-card");
-    card.innerHTML = `
-      <h3>${job.service}</h3>
-      <div class="booking-details">
-        <p><strong>Customer:</strong> ${job.name}</p>
-        <p><strong>Phone:</strong> ${job.phone}</p>
-        <p><strong>Date & Time:</strong> ${job.datetime}</p>
-        <p><strong>Requirements:</strong> ${job.requirements}</p>
-      </div>
-    `;
-    container.appendChild(card);
-  });
-}
+  // Loop through and display all assignments
+  assignments.forEach((assignment) => {
+    const jobCard = document.createElement("div");
+    jobCard.className = "job-card";
 
-window.onload = loadWorkerJobs;
+    jobCard.innerHTML = `
+      <h3>Job: ${assignment.job}</h3>
+      <p><strong>Assigned To:</strong> ${assignment.worker}</p>
+      <p><strong>Contact:</strong> ${assignment.contact}</p>
+      <p><strong>Skills:</strong> ${assignment.skills}</p>
+      ${assignment.salary ? `<p><strong>Salary:</strong> ${assignment.salary}</p>` : ""}
+      ${assignment.profile ? `<p><strong>Profile:</strong> ${assignment.profile}</p>` : ""}
+    `;
+
+    container.appendChild(jobCard);
+  });
+});
+
